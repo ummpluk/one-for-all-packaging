@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บริษัท วันฟอร์ออล แพคเกจจิ้ง จำกัด | บรรจุภัณฑ์อาหาร ซอง ม้วน ถุง</title>
+    <meta name="description" content="รับผลิตและจำหน่ายบรรจุภัณฑ์อาหาร ซอง ม้วน ถุง คุณภาพดี ราคาถูก ส่งฟรี บางบ่อ สมุทรปราการ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-blue: #0B1F3A;
+            --deep-purple: #1A2E4F;
+            --silver: #E5E7EB;
+            --silver-light: #F3F4F6;
+            --gold: #C9A227;
+            --white: #ffffff;
+            --gray-light: #F9FAFB;
+            --gray: #6B7280;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--deep-purple) 100%);
+            color: var(--white);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-area img {
+            height: 52px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--silver);
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: var(--gold);
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: var(--silver-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a:hover { color: var(--gold); }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after { width: 100%; }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--deep-purple) 100%);
+            background-image: url('cover.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: var(--white);
+            padding: 90px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(11,31,58,0.85) 0%, rgba(26,46,79,0.85) 100%);
+            z-index: 1;
+        }
+
+        @keyframes heroGlow {
+            from { transform: translate(0, 0); }
+            to { transform: translate(-2%, -2%); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(212,175,55,0.15);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 5px 18px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--silver);
+        }
+
+        .hero h2 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--silver-light);
+            margin-bottom: 22px;
+        }
+
+        .hero > div > div > p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 580px;
+            margin: 0 auto 32px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-family: 'Prompt', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, #b8962e 100%);
+            color: var(--dark-blue);
+            box-shadow: 0 4px 15px rgba(212,175,55,0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(212,175,55,0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--silver-light);
+            border: 2px solid var(--silver);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* SECTIONS */
+        .section { padding: 75px 40px; }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 1rem;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .section-divider {
+            width: 55px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--silver));
+            margin: 12px auto 18px;
+            border-radius: 2px;
+        }
+
+        /* PRODUCTS */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid #e8e8e8;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(26,26,78,0.15);
+            border-color: var(--gold);
+        }
+
+        .product-card:hover .product-icon img {
+            transform: scale(1.05);
+        }
+
+        .product-icon {
+            height: 170px;
+            background: #08101A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+            position: relative;
+        }
+
+        .product-icon img {
+            position: relative;
+            z-index: 1;
+            transition: transform 0.5s ease;
+        }
+
+        .product-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(8,16,26,0.7) 0%, rgba(27,53,84,0.7) 100%);
+            z-index: 0;
+        }
+
+        .product-info {
+            padding: 22px;
+            text-align: center;
+        }
+
+        .product-info h3 {
+            font-size: 1.2rem;
+            color: var(--dark-blue);
+            margin-bottom: 8px;
+        }
+
+        .product-info p {
+            color: var(--gray);
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        /* ABOUT */
+        .about-section { background: var(--gray-light); }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            max-width: 1050px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.9rem;
+            color: var(--dark-blue);
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
+            color: #555;
+            line-height: 1.85;
+            margin-bottom: 12px;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .stat-item {
+            background: linear-gradient(135deg, #0F1C2E 0%, #14263D 100%);
+            padding: 26px 22px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(201,162,39,0.2);
+            border-top: 3px solid #C9A227;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            border-color: rgba(201,162,39,0.4);
+        }
+
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #E5E7EB;
+            line-height: 1.4;
+            margin-bottom: 6px;
+            white-space: nowrap;
+        }
+
+        .stat-label {
+            color: rgba(229,231,235,0.7);
+            font-size: 0.82rem;
+            margin-top: 4px;
+            line-height: 1.5;
+        }
+
+        /* CONTACT */
+        .contact-section {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--deep-purple) 100%);
+            color: var(--white);
+        }
+
+        .contact-section .section-header h2 { color: var(--silver); }
+        .contact-section .section-header p { color: rgba(255,255,255,0.6); }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 16px;
+            padding: 28px 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            background: rgba(255,255,255,0.13);
+            transform: translateY(-4px);
+        }
+
+        .contact-icon { font-size: 2.2rem; margin-bottom: 12px; }
+
+        .contact-card h3 {
+            font-size: 0.9rem;
+            color: var(--gold);
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .contact-card p {
+            color: var(--silver-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .contact-card a { color: var(--white); text-decoration: none; }
+        .contact-card a:hover { color: var(--gold); }
+
+        /* CTA */
+        .cta-section { background: var(--gray-light); text-align: center; }
+
+        .cta-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.7rem;
+            color: var(--dark-blue);
+            margin-bottom: 12px;
+        }
+
+        .cta-section > p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .phone-big {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0d0d2b;
+            color: rgba(255,255,255,0.45);
+            padding: 25px 40px;
+            text-align: center;
+            font-size: 0.82rem;
+        }
+
+        footer a { color: var(--gold); text-decoration: none; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-top { padding: 10px 18px; }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--dark-blue);
+                flex-direction: column;
+                padding: 18px;
+                gap: 14px;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+
+            nav.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+
+            .hero { padding: 50px 20px; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero h2 { font-size: 0.95rem; }
+            .section { padding: 45px 20px; }
+
+            .products-grid { grid-template-columns: 1fr; gap: 18px; }
+            .about-grid { grid-template-columns: 1fr; gap: 28px; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .phone-big { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-top">
+        <div class="logo-area">
+            <img src="logo.png" alt="ONE FOR ALL PACKAGING" onerror="this.style.display='none'">
+            <div class="logo-text">
+                ONE FOR ALL
+                <span>PACKAGING</span>
+            </div>
+        </div>
+        <button class="mobile-menu-btn" onclick="document.querySelector('nav').classList.toggle('active')">☰</button>
+        <nav>
+            <a href="#home">หน้าแรก</a>
+            <a href="#products">สินค้า</a>
+            <a href="#about">เกี่ยวกับเรา</a>
+            <a href="#contact">ติดต่อ</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="hero-badge">SINCE 2024</div>
+        <h1>ONE FOR ALL PACKAGING</h1>
+        <h2>บรรจุภัณฑ์คุณภาพ ราคาจับต้องได้</h2>
+        <div>
+            <p>รับผลิตและจำหน่ายบรรจุภัณฑ์อาหารครบวงจร ซอง ม้วน ถุง สำหรับธุรกิจขนาดเล็กถึงขนาดใหญ่ บริการจัดส่งฟรีทั่วประเทศ</p>
+            <div class="hero-buttons">
+                <a href="tel:0971548638" class="btn btn-primary">📞 โทรเลย 097-154-8638</a>
+                <a href="#products" class="btn btn-outline">ดูสินค้า →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+    <div class="section-header">
+        <div class="section-divider"></div>
+        <h2>สินค้าของเรา</h2>
+        <p>บรรจุภัณฑ์หลากหลายประเภท ตอบโจทย์ทุกธุรกิจ</p>
+    </div>
+    <div class="products-grid">
+        <div class="product-card">
+            <div class="product-icon"><img src="8837d3bd-03a7-4aa5-8f9c-f58d85ab43054.png" alt="ซอง" style="width:100%;height:100%;object-fit:contain;margin:0;padding:0;display:block;"></div>
+            <div class="product-info">
+                <h3>ซอง (Pouch)</h3>
+                <p>ซองบรรจุภัณฑ์อาหาร ทนความชื้น เข้าไมโครเวฟได้ หลากหลายขนาด รับพิมพ์ลายแบรนด์ได้</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-icon"><img src="391f3399-925e-421b-8d07-04e10f2fc1da2.png" alt="ม้วน" style="width:100%;height:100%;object-fit:contain;margin:0;padding:0;display:block;"></div>
+            <div class="product-info">
+                <h3>ม้วน (Roll)</h3>
+                <p>ม้วนบรรจุภัณฑ์สำหรับเครื่องจักร อุตสาหกรรม ราคาส่งพิเศษ รองรับการพิมพ์ลายแบรนด์</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-icon"><img src="38871344-448b-40da-8801-c21eb15f8f762.png" alt="ถุง" style="width:100%;height:100%;object-fit:contain;margin:0;padding:0;display:block;"></div>
+            <div class="product-info">
+                <h3>ถุง (Bag)</h3>
+                <p>ถุง LDPE, HDPE, PP สำหรับอาหารทุกประเภท</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about-section" id="about">
+    <div class="about-grid">
+        <div class="about-text">
+            <div class="section-divider" style="margin:0 0 18px 0"></div>
+            <h2>เกี่ยวกับ ONE FOR ALL PACKAGING</h2>
+            <p>บริษัท วันฟอร์ออล แพคเกจจิ้ง จำกัด คือผู้เชี่ยวชาญด้านบรรจุภัณฑ์อาหารแบบครบวงจร ให้บริการผลิตและจำหน่าย ถุง ซอง และฟิล์มม้วนคุณภาพสูง สำหรับธุรกิจอาหารและเครื่องดื่ม</p>
+            <p>เรามุ่งเน้น คุณภาพมาตรฐานอุตสาหกรรม ควบคุมต้นทุน และส่งมอบตรงเวลา รองรับตั้งแต่ผู้ประกอบการรายย่อยไปจนถึงโรงงานผลิต</p>
+            <p>ให้บริการ ออกแบบและพิมพ์ลายแบรนด์ (OEM) พร้อมสั่งผลิตตามสเปก รองรับงานผลิตจริง พร้อมบริการจัดส่งถึงที่ทั่วประเทศ</p>
+        </div>
+        <div class="about-stats">
+            <div class="stat-item">
+                <div class="stat-number">รับผลิตครบวงจร</div>
+                <div class="stat-label">ตั้งแต่แบบจนถึงส่งมอบ</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">รองรับงานอุตสาหกรรม</div>
+                <div class="stat-label">คุณภาพพร้อมใช้งานจริง</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">ราคาแข่งขันได้</div>
+                <div class="stat-label">เหมาะกับธุรกิจทุกขนาด</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">ส่งไว ทันใจ</div>
+                <div class="stat-label">มีสต็อกพร้อมบางรายการ</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+    <div class="section-header">
+        <div class="section-divider"></div>
+        <h2>ติดต่อเรา</h2>
+        <p>พร้อมให้คำปรึกษาฟรี ติดต่อได้ทุกช่องทาง</p>
+    </div>
+    <div class="contact-grid">
+        <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h3>โทรศัพท์</h3>
+            <p><a href="tel:0971548638">097-154-8638</a></p>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <h3>ที่อยู่</h3>
+            <p>555/17 ต.บางเพรียง<br>อ.บางบ่อ จ.สมุทรปราการ 10560</p>
+        </div>
+        <div class="contact-card">
+            <div class="contact-icon">⏰</div>
+            <h3>เปิดให้บริการ</h3>
+            <p>จันทร์ - เสาร์<br>08:00 - 17:00 น.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-section">
+    <h2>พร้อมสั่งซื้อหรือสอบถามราคา?</h2>
+    <p>โทรหรือ Add Line มาคุยกับเราได้เลย</p>
+    <div class="phone-big">097-154-8638</div>
+    <a href="tel:0971548638" class="btn btn-primary">📞 โทรเดี๋ยวนี้</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2024 บริษัท วันฟอร์ออล แพคเกจจิ้ง จำกัด | บรรจุภัณฑ์อาหาร ซอง ม้วน ถุง คุณภาพดี ราคาถูก</p>
+</footer>
+
+</body>
+</html>
