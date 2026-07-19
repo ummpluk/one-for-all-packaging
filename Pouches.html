@@ -599,5 +599,21 @@
     <p>© 2024 บริษัท วันฟอร์ออล แพคเกจจิ้ง จำกัด | บรรจุภัณฑ์อาหาร ซอง ม้วน ถุง คุณภาพดี ราคาถูก</p>
 </footer>
 
+<!-- FLOATING MOBILE CTA BAR — โทร/LINE ติดล่างจอ (มือถือ) -->
+<style>
+.mobile-cta-bar{display:none}
+@media (max-width:768px){
+  .mobile-cta-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:9999;box-shadow:0 -2px 12px rgba(0,0,0,.18)}
+  .mobile-cta-bar a{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:14px 8px;font-family:'Prompt',sans-serif;font-weight:600;font-size:16px;text-decoration:none}
+  .mobile-cta-bar .mc-call{background:var(--gold);color:var(--dark-blue)}
+  .mobile-cta-bar .mc-line{background:#06C755;color:#fff}
+  body{padding-bottom:54px}
+}
+</style>
+<div class="mobile-cta-bar">
+  <a class="mc-call" href="tel:0971548638">📞 โทรเลย</a>
+  <a class="mc-line" href="https://lin.ee/s1Nfowp" target="_blank" rel="noopener">💬 แชท LINE</a>
+</div>
+
 </body>
 </html>
