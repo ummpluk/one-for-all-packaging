@@ -13,6 +13,7 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-JHW2WW3EQB');
+      gtag('config', 'AW-18389067495');   /* Google Ads — วัด conversion */
     </script>
     <meta property="og:title" content="รับผลิตถุงกาแฟมีวาล์ว ซองชา ซองซิปล็อค OEM | ONE FOR ALL PACKAGING">
     <meta property="og:description" content="ถุงกาแฟติดวาล์วระบายแก๊ส ซองชาก้นตั้งมีซิป กันชื้นกันแสง รักษากลิ่นหอมและรสชาติได้ยาวนาน พิมพ์แบรนด์คมชัดตามสเปคของคุณ">
@@ -456,6 +457,7 @@
       if (box.style.display !== 'none' && !box.dataset.tracked) {
         box.dataset.tracked = '1';
         ev('generate_lead', { product: product(), page: location.pathname });
+        ev('conversion', { send_to: 'AW-18389067495/0GjUCMzNsOEcEOfNy8BE', value: 1.0, currency: 'THB' });
       }
     }).observe(box, { attributes: true, attributeFilter: ['style'] });
   }

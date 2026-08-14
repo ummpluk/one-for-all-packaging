@@ -13,6 +13,7 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-JHW2WW3EQB');
+      gtag('config', 'AW-18389067495');   /* Google Ads — วัด conversion */
     </script>
     <meta property="og:title" content="รับผลิตซองซอส น้ำจิ้ม น้ำปลา เครื่องปรุงรส OEM | ONE FOR ALL PACKAGING">
     <meta property="og:description" content="ซองบรรจุซอส/น้ำจิ้ม/น้ำปลา/เครื่องปรุงรส กันซึมกันน้ำมัน พิมพ์โลโก้แบรนด์ ผลิตไว 15-20 วัน">
@@ -465,6 +466,7 @@
       if (box.style.display !== 'none' && !box.dataset.tracked) {
         box.dataset.tracked = '1';
         ev('generate_lead', { product: product(), page: location.pathname });
+        ev('conversion', { send_to: 'AW-18389067495/0GjUCMzNsOEcEOfNy8BE', value: 1.0, currency: 'THB' });
       }
     }).observe(box, { attributes: true, attributeFilter: ['style'] });
   }
