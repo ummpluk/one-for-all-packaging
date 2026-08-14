@@ -1233,5 +1233,31 @@ setupForm('lead-form-bottom', 'form-success-bottom', 'bottom-submit-btn');
   <a class="mc-line" href="https://lin.ee/s1Nfowp" target="_blank" rel="noopener">💬 แชท LINE</a>
 </div>
 
+<!-- วัดผล conversion (ใช้ตอนยิงแอด): ส่งฟอร์มสำเร็จ / กดโทร / กดไลน์ -->
+<script>
+(function(){
+  function ev(name, params){ if (window.gtag) gtag('event', name, params || {}); }
+  function product(){
+    var p = document.querySelector('#lead-form input[name="product"]');
+    return p ? p.value : '';
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (href.indexOf('tel:') === 0) ev('click_to_call', { phone: href.slice(4), page: location.pathname });
+    else if (/line\.me|lin\.ee/.test(href)) ev('click_line', { page: location.pathname });
+  });
+  var box = document.getElementById('form-success');
+  if (box && window.MutationObserver) {
+    new MutationObserver(function(){
+      if (box.style.display !== 'none' && !box.dataset.tracked) {
+        box.dataset.tracked = '1';
+        ev('generate_lead', { product: product(), page: location.pathname });
+      }
+    }).observe(box, { attributes: true, attributeFilter: ['style'] });
+  }
+})();
+</script>
 </body>
 </html>
