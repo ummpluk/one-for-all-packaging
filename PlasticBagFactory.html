@@ -443,7 +443,7 @@
 <!-- วัดผล conversion (ใช้ตอนยิงแอด): ส่งฟอร์มสำเร็จ / กดโทร / กดไลน์ -->
 <script>
 (function(){
-  function ev(name, params){ if (window.gtag) gtag('event', name, params || {}); }
+  function ev(name, params){ if (window.gtag) { var p = params || {}; p.transport_type = 'beacon'; gtag('event', name, p); } }
   function product(){
     var p = document.querySelector('#lead-form input[name="product"]');
     return p ? p.value : '';
