@@ -468,8 +468,9 @@
     if (href.indexOf('tel:') === 0) ev('click_to_call', { phone: href.slice(4), page: location.pathname });
     else if (/line\.me|lin\.ee/.test(href)) ev('click_line', { page: location.pathname });
   });
-  var box = document.getElementById('form-success');
-  if (box && window.MutationObserver) {
+  // จับทุกกล่อง "ส่งสำเร็จ" ในหน้า (hero / ท้ายหน้า / หน้าสินค้า) ไม่ผูกกับ id เดียว
+  var boxes = document.querySelectorAll('[id^="form-success"], .form-success-state');
+  if (window.MutationObserver) Array.prototype.forEach.call(boxes, function(box){
     new MutationObserver(function(){
       if (box.style.display !== 'none' && !box.dataset.tracked) {
         box.dataset.tracked = '1';
@@ -477,7 +478,7 @@
         ev('conversion', { send_to: 'AW-18389067495/0GjUCMzNsOEcEOfNy8BE', value: 1.0, currency: 'THB' });
       }
     }).observe(box, { attributes: true, attributeFilter: ['style'] });
-  }
+  });
 })();
 </script>
 </body>
