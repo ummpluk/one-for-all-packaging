@@ -770,6 +770,9 @@
                     </div>
                     <div class="form-group">
                         <input type="tel" name="phone" placeholder="เบอร์โทร หรือ Line ID *" required autocomplete="tel">
+        <input type="text" name="size" placeholder="ขนาด / หน้ากว้าง x ความหนา (ไม่รู้ปล่อยว่างได้)" style="width:100%;padding:13px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;font-family:'Prompt',sans-serif;font-size:15px">
+        <input type="text" name="qty" placeholder="ใช้เดือนละประมาณเท่าไหร่ (กก. หรือจำนวนใบ)" style="width:100%;padding:13px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;font-family:'Prompt',sans-serif;font-size:15px">
+        <p style="font-size:13px;color:#777;margin:-2px 0 10px;line-height:1.6">ไม่รู้สเปค? ส่งรูปม้วนหรือถุงเดิมมาทาง LINE ได้เลย เราดูให้ว่าเป็นฟิล์มโครงสร้างไหน</p>
                     </div>
                     <div class="form-group">
                         <select name="product">
@@ -1052,6 +1055,9 @@
                 </div>
                 <div class="form-group">
                     <input type="tel" name="phone" placeholder="เบอร์โทร หรือ Line ID *" required autocomplete="tel">
+        <input type="text" name="size" placeholder="ขนาด / หน้ากว้าง x ความหนา (ไม่รู้ปล่อยว่างได้)" style="width:100%;padding:13px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;font-family:'Prompt',sans-serif;font-size:15px">
+        <input type="text" name="qty" placeholder="ใช้เดือนละประมาณเท่าไหร่ (กก. หรือจำนวนใบ)" style="width:100%;padding:13px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;font-family:'Prompt',sans-serif;font-size:15px">
+        <p style="font-size:13px;color:#777;margin:-2px 0 10px;line-height:1.6">ไม่รู้สเปค? ส่งรูปม้วนหรือถุงเดิมมาทาง LINE ได้เลย เราดูให้ว่าเป็นฟิล์มโครงสร้างไหน</p>
                 </div>
                 <div class="form-group">
                     <select name="product">
@@ -1211,7 +1217,7 @@ function setupForm(formId, successId, btnId) {
                     name: fd0.get('name') || '',
                     phone: fd0.get('phone') || '',
                     product: fd0.get('product') || '',
-                    description: fd0.get('description') || fd0.get('message') || '',
+                    description: [fd0.get('size'), fd0.get('qty'), fd0.get('description'), fd0.get('message')].filter(Boolean).join(' · '),
                     _honey: fd0.get('_honey') || ''
                 })
             }).catch(function(){});

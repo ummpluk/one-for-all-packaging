@@ -362,6 +362,9 @@
         <input type="hidden" name="product" value="ซองซอส / น้ำจิ้ม / น้ำปลา / เครื่องปรุงรส">
         <input type="text" name="name" placeholder="ชื่อ-นามสกุล / บริษัท *" required autocomplete="name" style="width:100%;padding:13px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;font-family:'Prompt',sans-serif;font-size:15px">
         <input type="tel" name="phone" placeholder="เบอร์โทร หรือ Line ID *" required autocomplete="tel" style="width:100%;padding:13px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;font-family:'Prompt',sans-serif;font-size:15px">
+        <input type="text" name="size" placeholder="ขนาด / หน้ากว้าง x ความหนา (ไม่รู้ปล่อยว่างได้)" style="width:100%;padding:13px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;font-family:'Prompt',sans-serif;font-size:15px">
+        <input type="text" name="qty" placeholder="ใช้เดือนละประมาณเท่าไหร่ (กก. หรือจำนวนใบ)" style="width:100%;padding:13px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;font-family:'Prompt',sans-serif;font-size:15px">
+        <p style="font-size:13px;color:#777;margin:-2px 0 10px;line-height:1.6">ไม่รู้สเปค? ส่งรูปม้วนหรือถุงเดิมมาทาง LINE ได้เลย เราดูให้ว่าเป็นฟิล์มโครงสร้างไหน</p>
         <button type="submit" id="submit-btn" class="btn btn-primary" style="width:100%;border:none;cursor:pointer">ขอใบเสนอราคาเลย →</button>
     </form>
     <div id="form-success" style="display:none;max-width:420px;margin:22px auto 0;background:#e8f7ee;border-radius:10px;padding:20px;text-align:center">
@@ -445,7 +448,7 @@
     try{
       var fd=new FormData(form);
       fetch('https://n8n.oneforallpackaging.com/jarvis/lead',{method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({name:fd.get('name')||'',phone:fd.get('phone')||'',product:fd.get('product')||'',description:'',_honey:fd.get('_honey')||''})}).catch(function(){});
+        body:JSON.stringify({name:fd.get('name')||'',phone:fd.get('phone')||'',product:fd.get('product')||'',description:[fd.get('size'),fd.get('qty')].filter(Boolean).join(' · '),_honey:fd.get('_honey')||''})}).catch(function(){});
     }catch(_){}
     try{
       var res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
