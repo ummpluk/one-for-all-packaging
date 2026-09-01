@@ -12,8 +12,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>รับผลิตถุงอาหารสัตว์ ถุงก้นแบน ซองซีลกลาง ซอง 4 ด้าน | ONE FOR ALL PACKAGING</title>
-    <meta name="description" content="รับผลิตบรรจุภัณฑ์อาหารสัตว์ อาหารสุนัข-แมว อาหารปลา อาหารสัตว์เศรษฐกิจ ถุงก้นแบน FBT ซองซีลกลาง ซอง 4 ด้าน พิมพ์แบรนด์คุณเอง ผลิตไว 15-20 วัน โทร 097-154-8638">
+    <title>ถุงพลาสติก ม้วน ซอง ถุงแวคคั่ม ขายส่ง | ONE FOR ALL PACKAGING</title>
+    <meta name="description" content="ขายส่งถุงพลาสติก ม้วนพลาสติก ซอง ถุงแวคคั่ม LDPE HDPE PP ครบทุกรูปแบบ รับพิมพ์โลโก้แบรนด์ได้ ขอใบเสนอราคาฟรีทันที โทร 097-154-8638">
     <meta name="google-site-verification" content="HWW9QDAvLK3NbQwuOWMVB4RnsYmxyMfBHdBjazgYf-A">
     <link rel="canonical" href="https://oneforallpackaging.com/">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -23,8 +23,8 @@
     <meta name="msapplication-TileImage" content="icons/icon-48x48.png">
     <meta name="msapplication-TileColor" content="#0B1F3A">
     <meta name="theme-color" content="#0B1F3A">
-    <meta property="og:title" content="รับผลิตถุงอาหารสัตว์ | ถุงก้นแบน ซองซีลกลาง ซอง 4 ด้าน | ONE FOR ALL PACKAGING">
-    <meta property="og:description" content="ถุงอาหารสัตว์ ถุงก้นแบน ซองซีลกลาง ซอง 4 ด้าน พิมพ์แบรนด์คุณเอง ผลิตไว 15-20 วัน ใบเสนอราคาภายใน 24 ชม. โทร 097-154-8638">
+    <meta property="og:title" content="ซอง ม้วน ถุงพลาสติก พิมพ์โลโก้ | บรรจุภัณฑ์อาหาร | ONE FOR ALL PACKAGING">
+    <meta property="og:description" content="รับผลิตซอง ม้วน ถุงพลาสติก LDPE HDPE PP พิมพ์โลโก้แบรนด์ได้ ใบเสนอราคาภายใน 24 ชม. โทร 097-154-8638">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://oneforallpackaging.com">
     <meta property="og:image" content="https://oneforallpackaging.com/LOGO.png">
@@ -203,13 +203,6 @@
             gap: 52px;
             align-items: center;
         }
-        .hero-bag { display: flex; justify-content: center; align-items: center; }
-        .hero-bag img {
-            width: 100%; max-width: 270px; height: auto; display: block;
-            filter: drop-shadow(0 26px 44px rgba(0,0,0,0.55));
-            animation: bagIn .9s cubic-bezier(.2,.7,.3,1) both;
-        }
-        @keyframes bagIn { from { opacity:0; transform: translateY(18px) } to { opacity:1; transform:none } }
 
         .hero-badge {
             display: inline-block;
@@ -406,6 +399,37 @@
         }
 
         /* ─── PRODUCTS ───────────────────────────────── */
+
+        /* การ์ดเรือธง — งานอาหารสัตว์ */
+        .product-card.flagship {
+            grid-column: 1 / -1;
+            display: grid; grid-template-columns: 300px 1fr;
+            border: 2px solid var(--gold);
+            box-shadow: 0 14px 40px rgba(201,162,39,0.22);
+            position: relative; overflow: hidden;
+        }
+        .product-card.flagship .product-icon {
+            height: auto; min-height: 280px;
+            background: linear-gradient(135deg,#0B1F3A 0%,#1A2E4F 100%);
+        }
+        .product-card.flagship .product-icon::before { display:none; }
+        .product-card.flagship .product-icon img { padding: 22px 16px; object-fit: contain; }
+        .product-card.flagship .flag-body { padding: 26px 28px; display:flex; flex-direction:column; justify-content:center; }
+        .product-card.flagship h3 { font-size: 1.45rem; margin-bottom: 6px; }
+        .product-card.flagship .flag-badge {
+            display:inline-block; align-self:flex-start; background: var(--gold); color:#0B1F3A;
+            font-size:.75rem; font-weight:700; letter-spacing:1px; padding:4px 14px; border-radius:20px; margin-bottom:10px;
+        }
+        .product-card.flagship .flag-tags { display:flex; flex-wrap:wrap; gap:7px; margin:12px 0 18px; }
+        .product-card.flagship .flag-tags span {
+            font-size:.8rem; color:#5c4a1a; background:#fff8e6; border:1px solid #f0d9a0; padding:3px 11px; border-radius:14px;
+        }
+        .product-card.flagship .product-ctas { padding:0; }
+        @media (max-width: 780px) {
+            .product-card.flagship { grid-template-columns: 1fr; }
+            .product-card.flagship .product-icon { min-height: 230px; }
+            .product-card.flagship .flag-body { padding: 20px; }
+        }
         .products-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -669,15 +693,13 @@
 
         /* ─── RESPONSIVE ─────────────────────────────── */
         @media (max-width: 960px) {
-            .hero-bag { order: 0; margin: 4px auto 2px; }
-            .hero-bag img { max-width: 168px; }
             .hero-inner {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
-            /* มือถือ: บอกก่อนว่าขายอะไร แล้วค่อยตามด้วยฟอร์ม */
-            .hero-form-wrap { order: 1; }
-            .hero-text { order: -1; text-align: center; }
+            /* Form first on mobile */
+            .hero-form-wrap { order: -1; }
+            .hero-text { order: 1; text-align: center; }
             .hero-bullets { display: inline-block; text-align: left; }
 
             .bottom-form-inner { grid-template-columns: 1fr; gap: 32px; }
@@ -720,85 +742,6 @@
             .contact-grid { grid-template-columns: 1fr; }
             .bottom-right { padding: 24px 18px; }
         }
-
-        /* ⭐ PET FOOD FLAGSHIP */
-        .petfood-flagship {
-            background: linear-gradient(180deg, #FBF9F2 0%, #F7F4EA 100%);
-            border-top: 3px solid var(--gold);
-            border-bottom: 1px solid rgba(201,162,39,.25);
-        }
-        .flagship-badge {
-            display: inline-block;
-            background: var(--gold);
-            color: #fff;
-            font-size: .82rem;
-            letter-spacing: 1px;
-            padding: 5px 16px;
-            border-radius: 999px;
-            margin-bottom: 12px;
-        }
-        .petfood-icon {
-            display: flex; align-items: center; justify-content: center;
-            background: linear-gradient(135deg, #0B1F3A 0%, #1A2E4F 100%);
-            min-height: 260px; height: 260px;
-        }
-        .petfood-icon svg { width: 96px; height: 96px; opacity: .95; }
-
-        /* แถบรูปแบบถุง (ไดอะแกรมทรง) */
-        .shape-band { max-width: 1180px; margin: 30px auto 0; }
-        .shape-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 14px; margin-top: 18px;
-        }
-        .shape-item {
-            background: #fff; border: 1px solid #e8e3d6; border-radius: 14px;
-            padding: 16px 10px 14px; text-align: center;
-            box-shadow: 0 4px 14px rgba(11,31,58,0.06);
-            transition: transform .25s ease, box-shadow .25s ease;
-        }
-        .shape-item:hover { transform: translateY(-4px); box-shadow: 0 12px 26px rgba(11,31,58,0.13); }
-        .shape-item svg { width: 78px; height: 96px; display: block; margin: 0 auto 10px; }
-        .shape-item strong { display:block; font-size: .95rem; color: #0B1F3A; font-weight: 600; }
-        .shape-item span { display:block; font-size: .8rem; color: #7a7568; margin-top: 4px; line-height:1.5; }
-        @media (max-width: 480px) {
-            .shape-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-            .shape-item svg { width: 64px; height: 80px; }
-        }
-        .petfood-types {
-            display: flex; flex-wrap: wrap; gap: 9px; justify-content: center;
-            max-width: 900px; margin: 22px auto 0;
-        }
-        .petfood-types span {
-            border: 1px solid rgba(201,162,39,.5);
-            background: rgba(255,255,255,.7);
-            color: #5c4a1a;
-            border-radius: 999px; padding: 6px 14px; font-size: .92rem;
-        }
-        .petfood-why {
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
-            max-width: 1050px; margin: 30px auto 0;
-        }
-        .petfood-why div {
-            background: #fff; border: 1px solid rgba(11,31,58,.09);
-            border-radius: 12px; padding: 18px 16px;
-        }
-        .petfood-why strong { display: block; color: var(--dark-blue); font-size: 1rem; margin-bottom: 7px; }
-        .petfood-why span { color: var(--gray); font-size: .9rem; line-height: 1.7; }
-        .petfood-note {
-            max-width: 900px; margin: 22px auto 0; text-align: center;
-            font-size: .92rem; color: var(--gray); line-height: 1.8;
-        }
-        .petfood-cta {
-            display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
-            margin-top: 24px;
-        }
-        .petfood-cta a { min-width: 240px; text-align: center; }
-        @media (max-width: 768px) {
-            .petfood-why { grid-template-columns: 1fr; gap: 12px; }
-            .petfood-icon { min-height: 210px; height: 210px; }
-            .petfood-icon svg { width: 76px; height: 76px; }
-            .petfood-cta a { min-width: 100%; }
-        }
     </style>
 </head>
 <body>
@@ -816,7 +759,6 @@
         <button class="mobile-menu-btn" id="menuBtn" aria-label="เมนู">☰</button>
         <nav id="mainNav">
             <a href="#home">หน้าแรก</a>
-            <a href="#petfood">อาหารสัตว์</a>
             <a href="#products">สินค้า</a>
             <a href="#about">เกี่ยวกับเรา</a>
             <a href="#contact">ติดต่อ</a>
@@ -831,9 +773,9 @@
 
         <!-- LEFT: Text -->
         <div class="hero-text">
-            <div class="hero-badge">บรรจุภัณฑ์อาหารสัตว์ · บรรจุภัณฑ์อาหาร · OEM</div>
-            <h1>รับผลิตถุงอาหารสัตว์<br>ถุงก้นแบน · ซีลกลาง · ซอง 4 ด้าน</h1>
-            <h2>อาหารสุนัข-แมว อาหารปลา อาหารกุ้ง อาหารสัตว์เศรษฐกิจ<br>พิมพ์แบรนด์คุณเอง ผลิตไว 15–20 วัน · รับงานซอง ม้วน ถุง PE ทุกชนิดเช่นเดิม</h2>
+            <div class="hero-badge">บรรจุภัณฑ์อาหาร · OEM · LDPE HDPE PP</div>
+            <h1>ถุงพลาสติก ม้วน ซอง ถุงแวคคั่ม<br>ขายส่ง LDPE HDPE PP</h1>
+            <h2>ไม่รู้จะสั่งที่ไหน? MOQ สูงเกินไป? ส่งช้า?<br>เราช่วยได้ ตั้งแต่ออกแบบจนถึงส่งมอบ</h2>
             <ul class="hero-bullets">
                 <li>ผลิตไว 15–20 วัน (เร็วกว่าตลาด)</li>
                 <li>ใบเสนอราคาภายใน 24 ชม.</li>
@@ -866,7 +808,6 @@
                     <div class="form-group">
                         <select name="product">
                             <option value="">— สินค้า/บริการที่สนใจ —</option>
-                            <option value="บรรจุภัณฑ์อาหารสัตว์ (FBT / ซีลกลาง / 4SS)">บรรจุภัณฑ์อาหารสัตว์ — ถุงก้นแบน / ซีลกลาง / ซอง 4 ด้าน</option>
                             <option value="ซอง (Pouch)">ซอง — ตั้งได้ / ซิป / สูญญากาศ</option>
                             <option value="ม้วนฟิล์ม (Roll)">ม้วนฟิล์ม (Roll)</option>
                             <option value="ถุง (Bag)">ถุง — หูหิ้ว / ถุงใส</option>
@@ -893,10 +834,6 @@
     </div>
 </section>
 
-<section class="section" style="padding-top:26px;padding-bottom:0">
-<div class="moq-gate" style="max-width:900px;margin:0 auto;padding:14px 18px;background:#fff8e6;border:1px solid #f0d9a0;border-left:4px solid #e0a800;border-radius:10px;font-size:14.5px;line-height:1.75;color:#5c4a1a"><strong>⚖️ ขั้นต่ำผลิต — งานซอง/ถุงพิมพ์ ประมาณ 50,000 ใบ ต่อ 1 แบบ</strong> (ซองกลาง 140x200 มม. · ซองเล็กลงต้องสั่งมากใบขึ้น ซองใหญ่ใช้น้อยลง) · <strong>งานม้วน/ถุงเป่า ประมาณ 300 กก. ต่อสูตรหรือหน้ากว้าง</strong> · หลายขนาดที่ใช้ฟิล์มสูตรเดียวกัน <strong>รวมเป็นงานเดียวได้</strong><br>เรารับงานโรงงานและแบรนด์ที่มีสินค้าวางขายแล้ว — ถ้าต้องการหลักร้อยถึงหลักพันใบ แนะนำให้ใช้ถุงสำเร็จรูปก่อน จะคุ้มกว่าสั่งผลิต</div>
-</section>
-
 <!-- TRUST BAR -->
 <section class="trust-bar">
     <div class="trust-items">
@@ -919,74 +856,6 @@
     </div>
 </section>
 
-<!-- ⭐ PET FOOD / ANIMAL FEED — งานเรือธง (ชูเป็นอันดับ 1) -->
-<section class="section petfood-flagship" id="petfood">
-    <div class="section-header">
-        <div class="section-divider"></div>
-        <div class="flagship-badge">งานที่เราถนัดที่สุด</div>
-        <h2>บรรจุภัณฑ์อาหารสัตว์</h2>
-        <p>อาหารสุนัข-แมว อาหารปลา อาหารนก อาหารกุ้ง และอาหารสัตว์เศรษฐกิจ<br>ทำครบทั้งถุงก้นแบน ซองซีลกลาง และซองซีล 4 ด้าน พิมพ์แบรนด์คุณเอง ผลิตไว 15–20 วัน</p>
-    </div>
-
-    <div class="products-grid petfood-grid">
-        <div class="product-card">
-            <div class="product-icon petfood-icon"><img src="work/ofa-fbt.png" alt="ถุงก้นแบน Flat Bottom FBT ตั้งได้เต็มใบ" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:2;padding:18px 12px" draggable="false"></div>
-            <div class="product-info">
-                <h3>ถุงก้นแบน (Flat Bottom · FBT)</h3>
-                <p>ตั้งโชว์บนชั้นได้เต็มใบ เหลี่ยมคม ดูพรีเมียมกว่าถุงทั่วไป บรรจุได้ตั้งแต่ 1 ถึง 20 กก. ใส่ซิปเปิด-ปิดซ้ำหรือหูหิ้วเพิ่มได้ เหมาะกับอาหารเม็ดที่ต้องวางขายหน้าร้าน</p>
-            </div>
-            <div class="product-ctas" style="grid-template-columns:1fr">
-                <a href="#lead-form-section" class="btn-quote">ขอใบเสนอราคา</a>
-            </div>
-        </div><div class="product-card">
-            <div class="product-icon petfood-icon"><img src="work/ofa-centerseal.png" alt="ซองซีลกลาง ม้วนออโตแพค" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:2;padding:18px 12px" draggable="false"></div>
-            <div class="product-info">
-                <h3>ซองซีลกลาง · ม้วนออโตแพค</h3>
-                <p>มีเครื่องบรรจุอัตโนมัติอยู่แล้ว เราส่งเป็นม้วนฟิล์มเข้าเครื่องได้เลย ต้นทุนต่อใบถูกกว่าซองสำเร็จ บรรจุได้เร็วกว่า ทดสอบกับเครื่องของคุณก่อนผลิตจริงทุกงาน</p>
-            </div>
-            <div class="product-ctas" style="grid-template-columns:1fr">
-                <a href="#lead-form-section" class="btn-quote">ขอใบเสนอราคา</a>
-            </div>
-        </div><div class="product-card">
-            <div class="product-icon petfood-icon"><img src="work/ofa-4ss.png" alt="ซองซีล 4 ด้าน 4SS" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:2;padding:18px 12px" draggable="false"></div>
-            <div class="product-info">
-                <h3>ซองซีล 4 ด้าน (4SS)</h3>
-                <p>ฟิล์มหนาพิเศษ ซีลแข็งแรง ยกถุงหนักแล้วไม่ปริ ทนการขนส่งและการวางซ้อน เจาะหูหิ้วได้ เหมาะกับอาหารปลาถุงใหญ่และอาหารสัตว์เศรษฐกิจ</p>
-            </div>
-            <div class="product-ctas" style="grid-template-columns:1fr">
-                <a href="#lead-form-section" class="btn-quote">ขอใบเสนอราคา</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="petfood-types">
-        <span>อาหารสุนัข</span><span>อาหารแมว</span><span>ขนมสัตว์เลี้ยงแบบแห้ง</span><span>อาหารปลาสวยงาม / ปลาคาร์พ</span><span>อาหารกุ้ง</span><span>อาหารนก</span><span>อาหารไก่ · หมู · วัว</span><span>อาหารเม็ดอัด</span>
-    </div>
-
-
-    <div class="shape-band">
-        <div style="text-align:center">
-            <h3 style="font-family:'Montserrat',sans-serif;font-size:1.28rem;color:#0B1F3A;font-weight:700;margin-bottom:6px">รูปแบบถุงที่เราผลิตได้</h3>
-            <p style="color:#7a7568;font-size:.95rem;line-height:1.7;max-width:640px;margin:0 auto">เลือกทรงตามสินค้าและวิธีบรรจุของคุณ — ไม่แน่ใจว่าควรใช้ทรงไหน ส่งรูปถุงเดิมมาทาง LINE เราดูให้</p>
-        </div>
-        <div class="shape-grid"><div class="shape-item"><svg viewBox="0 0 90 112" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M22 26h46v72H22z"/><path d="M22 98l-8 8h62l-8-8"/><path d="M14 106V34l8-8M76 106V34l-8-8"/><path d="M45 26v72" stroke="#C9A227" stroke-dasharray="4 4"/><path d="M22 26h46" stroke="#C9A227" stroke-width="3"/></svg><strong>ถุงก้นแบน (FBT)</strong><span>ตั้งได้เต็มใบ · 1-20 กก.</span></div><div class="shape-item"><svg viewBox="0 0 90 112" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M20 22h50v70H20z"/><path d="M20 92c10 8 40 8 50 0"/><path d="M24 34h42" stroke="#C9A227" stroke-width="3"/><path d="M20 22h50" stroke="#C9A227" stroke-width="3"/></svg><strong>ซองก้นตั้ง + ซิป</strong><span>ตั้งโชว์ชั้น เปิด-ปิดซ้ำ</span></div><div class="shape-item"><svg viewBox="0 0 90 112" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M24 20h42v76H24z"/><path d="M45 20v76" stroke="#C9A227" stroke-dasharray="5 4"/><path d="M24 20h42M24 96h42" stroke="#C9A227" stroke-width="3"/></svg><strong>ซองซีลกลาง · ม้วน</strong><span>เข้าเครื่องออโตแพค</span></div><div class="shape-item"><svg viewBox="0 0 90 112" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M24 18h42v80H24z"/><path d="M24 18h42M24 98h42M66 18v80" stroke="#C9A227" stroke-width="3"/></svg><strong>ซองซีล 3 ด้าน</strong><span>ซองแบน ต้นทุนคุ้ม</span></div><div class="shape-item"><svg viewBox="0 0 90 112" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M22 18h46v80H22z"/><rect x="30" y="26" width="30" height="64" stroke="#0B1F3A"/><path d="M22 18h46M22 98h46M22 18v80M68 18v80" stroke="#C9A227" stroke-width="3"/></svg><strong>ซองซีล 4 ด้าน (4SS)</strong><span>ซีลแข็งแรงรอบใบ</span></div><div class="shape-item"><svg viewBox="0 0 90 112" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M24 30h42v68H24z"/><path d="M36 30V20a9 9 0 0118 0v10" stroke="#C9A227" stroke-width="3"/><path d="M24 98l-6 6h54l-6-6"/></svg><strong>ถุงหูหิ้ว / เจาะหิ้ว</strong><span>ถุงใหญ่ ยกสะดวก</span></div></div>
-    </div>
-
-    <div class="petfood-why">
-        <div><strong>กันชื้น กันหืน</strong><span>ฟิล์มหลายชั้นกันอากาศและความชื้น อาหารเม็ดไม่นิ่ม ไขมันไม่หืน เก็บได้นานตามอายุสินค้า</span></div>
-        <div><strong>ซีลทนน้ำหนัก</strong><span>เลือกความหนาฟิล์มตามน้ำหนักบรรจุจริง ยก 20 กก. แล้วไม่ปริซีล ไม่รั่วระหว่างขนส่ง</span></div>
-        <div><strong>พิมพ์กราเวียร์ 8 สี</strong><span>สีคมชัด ลายละเอียด งานพิมพ์ระดับวางขายห้าง ทำแบรนด์ตัวเองหรือรับผลิต OEM ให้แบรนด์อื่น</span></div>
-        <div><strong>ผลิตไว 15–20 วัน</strong><span>เร็วกว่าตลาดที่ใช้ 30–40 วัน ของหมดสต๊อกไม่ต้องรอนาน ใบเสนอราคาภายใน 24 ชม.</span></div>
-    </div>
-
-    <p class="petfood-note">รับงาน<strong>อาหารแห้ง อาหารเม็ด และขนมแบบแห้ง</strong> — งานอาหารสัตว์แบบเปียกที่ต้องผ่านการฆ่าเชื้อด้วยความร้อนในบรรจุภัณฑ์ (รีทอร์ท) ยังไม่รับผลิต</p>
-
-    <div class="petfood-cta">
-        <a href="#lead-form-section" class="btn-quote">ขอใบเสนอราคางานอาหารสัตว์</a>
-        <a href="PetFoodPouch.html" class="btn-detail">ดูรายละเอียดงานอาหารสัตว์</a>
-    </div>
-</section>
-
 <!-- PRODUCTS -->
 <section class="section" id="products">
     <div class="section-header">
@@ -1001,7 +870,21 @@
         <p>พิมพ์แบรนด์ตัวเอง กันชื้น-กันแสง สำหรับสินค้าที่ต้องวางขาย</p>
     </div>
     <div class="products-grid">
-<div class="product-card">
+<div class="product-card flagship">
+            <div class="product-icon">
+                <img draggable="false" src="work/ofa-fbt.png" alt="ถุงอาหารสัตว์ก้นแบน FBT พิมพ์แบรนด์">
+            </div>
+            <div class="flag-body">
+                <span class="flag-badge">งานที่เราถนัดที่สุด</span>
+                <h3>บรรจุภัณฑ์อาหารสัตว์</h3>
+                <p style="color:var(--gray);line-height:1.85">ถุงอาหารสุนัข-แมว อาหารปลา อาหารนก อาหารกุ้ง และอาหารสัตว์เศรษฐกิจ ทำครบทั้งถุงก้นแบนตั้งได้ ซองซีลกลางเข้าเครื่องออโตแพค และซองซีล 4 ด้าน บรรจุได้ตั้งแต่ 1 ถึง 20 กก. ฟิล์มกันชื้นกันกลิ่น พิมพ์แบรนด์คุณเอง ผลิตไว 15-20 วัน</p>
+                <div class="flag-tags"><span>ถุงก้นแบน FBT</span><span>ซองซีลกลาง / ม้วน</span><span>ซองซีล 4 ด้าน</span><span>ซิปล็อค · หูหิ้ว</span></div>
+                <div class="product-ctas">
+                    <a href="PetFoodPouch.html" class="btn-detail">ดูรายละเอียด</a>
+                    <a href="#lead-form-section" class="btn-quote">ขอใบเสนอราคา</a>
+                </div>
+            </div>
+        </div><div class="product-card">
             <div class="product-icon">
                 <img draggable="false" src="391f3399-925e-421b-8d07-04e10f2fc1da2.jpg" alt="ม้วนฟิล์มออโตแพค ลามิเนต">
             </div>
@@ -1220,7 +1103,6 @@
                 <div class="form-group">
                     <select name="product">
                         <option value="">— สินค้า/บริการที่สนใจ —</option>
-                            <option value="บรรจุภัณฑ์อาหารสัตว์ (FBT / ซีลกลาง / 4SS)">บรรจุภัณฑ์อาหารสัตว์ — ถุงก้นแบน / ซีลกลาง / ซอง 4 ด้าน</option>
                         <option value="ซอง (Pouch)">ซอง — ตั้งได้ / ซิป / สูญญากาศ</option>
                         <option value="ม้วนฟิล์ม (Roll)">ม้วนฟิล์ม (Roll)</option>
                         <option value="ถุง (Bag)">ถุง — หูหิ้ว / ถุงใส</option>
@@ -1265,7 +1147,7 @@
     <p class="faq-sub">อยากรู้อะไรก่อนสั่ง เช็คได้เลย — หรือโทร 097-154-8638 ถามได้ทันที</p>
 
     <details class="faq-item"><summary>สั่งขั้นต่ำ (MOQ) เท่าไหร่?</summary>
-      <div class="faq-a">ขั้นต่ำต่างกันตามชนิดงาน — งานซอง/ถุงพิมพ์ ประมาณ 50,000 ใบ ต่อ 1 แบบ (ซองกลาง 140x200 มม. ซองเล็กลงต้องสั่งมากใบขึ้น ซองใหญ่ใช้น้อยลง) ส่วนงานม้วนและถุงเป่า ประมาณ 300 กก. ต่อสูตรหรือหน้ากว้าง หลายขนาดที่ใช้ฟิล์มสูตรเดียวกันรวมเป็นงานเดียวได้ ถ้าต้องการหลักร้อยถึงหลักพันใบ แนะนำให้ใช้ถุงสำเร็จรูปก่อน โทร 097-154-8638</div></details>
+      <div class="faq-a">ขั้นต่ำการผลิตขึ้นอยู่กับขนาดถุงและชนิดงาน ถุงใบใหญ่ใช้จำนวนใบน้อยลง ซองใบเล็กใช้มากใบขึ้น แจ้งขนาดกับปริมาณที่ใช้ต่อเดือนมาได้เลย เราคำนวณขั้นต่ำจริงของงานคุณให้ หลายขนาดที่ใช้ฟิล์มสูตรเดียวกัน รวมเป็นงานเดียวได้</div></details>
 
     <details class="faq-item"><summary>รับผลิตพิมพ์โลโก้/แบรนด์เองได้ไหม?</summary>
       <div class="faq-a">ได้ครับ เรารับงาน OEM/ODM พิมพ์โลโก้และลายแบรนด์ตามสเปกลูกค้า ทั้งซอง ม้วนฟิล์ม และถุง</div></details>
@@ -1289,7 +1171,7 @@
 <!-- FAQPage schema (ให้ Google/AI ดึงไปตอบ) -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"สั่งขั้นต่ำ (MOQ) เท่าไหร่?","acceptedAnswer":{"@type":"Answer","text":"ขั้นต่ำต่างกันตามชนิดงาน — งานซอง/ถุงพิมพ์ ประมาณ 50,000 ใบ ต่อ 1 แบบ (ซองกลาง 140x200 มม. ซองเล็กลงต้องสั่งมากใบขึ้น ซองใหญ่ใช้น้อยลง) ส่วนงานม้วนและถุงเป่า ประมาณ 300 กก. ต่อสูตรหรือหน้ากว้าง หลายขนาดที่ใช้ฟิล์มสูตรเดียวกันรวมเป็นงานเดียวได้ ถ้าต้องการหลักร้อยถึงหลักพันใบ แนะนำให้ใช้ถุงสำเร็จรูปก่อน โทร 097-154-8638"}},
+{"@type":"Question","name":"สั่งขั้นต่ำ (MOQ) เท่าไหร่?","acceptedAnswer":{"@type":"Answer","text":"ขั้นต่ำการผลิตขึ้นอยู่กับขนาดถุงและชนิดงาน ถุงใบใหญ่ใช้จำนวนใบน้อยลง ซองใบเล็กใช้มากใบขึ้น แจ้งขนาดกับปริมาณที่ใช้ต่อเดือนมาได้เลย เราคำนวณขั้นต่ำจริงของงานคุณให้ หลายขนาดที่ใช้ฟิล์มสูตรเดียวกัน รวมเป็นงานเดียวได้"}},
 {"@type":"Question","name":"รับผลิตพิมพ์โลโก้/แบรนด์เองได้ไหม?","acceptedAnswer":{"@type":"Answer","text":"ได้ รับงาน OEM/ODM พิมพ์โลโก้และลายแบรนด์ตามสเปกลูกค้า ทั้งซอง ม้วนฟิล์ม และถุง"}},
 {"@type":"Question","name":"ใช้วัสดุอะไรได้บ้าง?","acceptedAnswer":{"@type":"Answer","text":"LDPE HDPE PP และฟิล์มลามิเนตหลายชั้น กันชื้น กันอากาศ เก็บได้นาน"}},
 {"@type":"Question","name":"ขอใบเสนอราคานานไหม?","acceptedAnswer":{"@type":"Answer","text":"ส่งใบเสนอราคาภายใน 24 ชั่วโมง หลังได้รายละเอียดงาน"}},
