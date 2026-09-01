@@ -203,6 +203,13 @@
             gap: 52px;
             align-items: center;
         }
+        .hero-bag { display: flex; justify-content: center; align-items: center; }
+        .hero-bag img {
+            width: 100%; max-width: 270px; height: auto; display: block;
+            filter: drop-shadow(0 26px 44px rgba(0,0,0,0.55));
+            animation: bagIn .9s cubic-bezier(.2,.7,.3,1) both;
+        }
+        @keyframes bagIn { from { opacity:0; transform: translateY(18px) } to { opacity:1; transform:none } }
 
         .hero-badge {
             display: inline-block;
@@ -662,6 +669,8 @@
 
         /* ─── RESPONSIVE ─────────────────────────────── */
         @media (max-width: 960px) {
+            .hero-bag { order: 0; margin: 4px auto 2px; }
+            .hero-bag img { max-width: 168px; }
             .hero-inner {
                 grid-template-columns: 1fr;
                 gap: 30px;
@@ -731,9 +740,30 @@
         .petfood-icon {
             display: flex; align-items: center; justify-content: center;
             background: linear-gradient(135deg, #0B1F3A 0%, #1A2E4F 100%);
-            min-height: 150px;
+            min-height: 260px; height: 260px;
         }
         .petfood-icon svg { width: 96px; height: 96px; opacity: .95; }
+
+        /* แถบรูปแบบถุง (ไดอะแกรมทรง) */
+        .shape-band { max-width: 1180px; margin: 30px auto 0; }
+        .shape-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 14px; margin-top: 18px;
+        }
+        .shape-item {
+            background: #fff; border: 1px solid #e8e3d6; border-radius: 14px;
+            padding: 16px 10px 14px; text-align: center;
+            box-shadow: 0 4px 14px rgba(11,31,58,0.06);
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .shape-item:hover { transform: translateY(-4px); box-shadow: 0 12px 26px rgba(11,31,58,0.13); }
+        .shape-item svg { width: 78px; height: 96px; display: block; margin: 0 auto 10px; }
+        .shape-item strong { display:block; font-size: .95rem; color: #0B1F3A; font-weight: 600; }
+        .shape-item span { display:block; font-size: .8rem; color: #7a7568; margin-top: 4px; line-height:1.5; }
+        @media (max-width: 480px) {
+            .shape-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .shape-item svg { width: 64px; height: 80px; }
+        }
         .petfood-types {
             display: flex; flex-wrap: wrap; gap: 9px; justify-content: center;
             max-width: 900px; margin: 22px auto 0;
@@ -765,7 +795,7 @@
         .petfood-cta a { min-width: 240px; text-align: center; }
         @media (max-width: 768px) {
             .petfood-why { grid-template-columns: 1fr; gap: 12px; }
-            .petfood-icon { min-height: 120px; }
+            .petfood-icon { min-height: 210px; height: 210px; }
             .petfood-icon svg { width: 76px; height: 76px; }
             .petfood-cta a { min-width: 100%; }
         }
@@ -900,10 +930,7 @@
 
     <div class="products-grid petfood-grid">
         <div class="product-card">
-            <!-- TODO: แทนที่ด้วยรูปงานจริงเมื่อได้จากลูกค้า/โรงงาน -->
-            <div class="product-icon petfood-icon"><svg viewBox="0 0 120 120" width="96" height="96" fill="none" stroke="#C9A227" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
-                <path d="M32 26h56v66H32z"/><path d="M32 92l-10 10h76l-10-10"/><path d="M60 26v66"/><path d="M22 102V38l10-12M108 102V38L98 26"/><path d="M44 44h32M44 56h20"/>
-            </svg></div>
+            <div class="product-icon petfood-icon"><img src="work/ofa-fbt.png" alt="ถุงก้นแบน Flat Bottom FBT ตั้งได้เต็มใบ" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:2;padding:18px 12px" draggable="false"></div>
             <div class="product-info">
                 <h3>ถุงก้นแบน (Flat Bottom · FBT)</h3>
                 <p>ตั้งโชว์บนชั้นได้เต็มใบ เหลี่ยมคม ดูพรีเมียมกว่าถุงทั่วไป บรรจุได้ตั้งแต่ 1 ถึง 20 กก. ใส่ซิปเปิด-ปิดซ้ำหรือหูหิ้วเพิ่มได้ เหมาะกับอาหารเม็ดที่ต้องวางขายหน้าร้าน</p>
@@ -912,9 +939,7 @@
                 <a href="#lead-form-section" class="btn-quote">ขอใบเสนอราคา</a>
             </div>
         </div><div class="product-card">
-            <div class="product-icon petfood-icon"><svg viewBox="0 0 120 120" width="96" height="96" fill="none" stroke="#C9A227" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
-                <ellipse cx="36" cy="60" rx="12" ry="30"/><path d="M36 30h48a30 30 0 010 60H36"/><ellipse cx="84" cy="60" rx="12" ry="30"/><path d="M60 46h18M60 60h18M60 74h18"/>
-            </svg></div>
+            <div class="product-icon petfood-icon"><img src="work/ofa-centerseal.png" alt="ซองซีลกลาง ม้วนออโตแพค" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:2;padding:18px 12px" draggable="false"></div>
             <div class="product-info">
                 <h3>ซองซีลกลาง · ม้วนออโตแพค</h3>
                 <p>มีเครื่องบรรจุอัตโนมัติอยู่แล้ว เราส่งเป็นม้วนฟิล์มเข้าเครื่องได้เลย ต้นทุนต่อใบถูกกว่าซองสำเร็จ บรรจุได้เร็วกว่า ทดสอบกับเครื่องของคุณก่อนผลิตจริงทุกงาน</p>
@@ -923,9 +948,7 @@
                 <a href="#lead-form-section" class="btn-quote">ขอใบเสนอราคา</a>
             </div>
         </div><div class="product-card">
-            <div class="product-icon petfood-icon"><svg viewBox="0 0 120 120" width="96" height="96" fill="none" stroke="#C9A227" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
-                <path d="M28 24h64v72H28z"/><path d="M36 32h48v56H36z" stroke-dasharray="5 4"/><circle cx="60" cy="42" r="5"/><path d="M46 60h28M46 72h18"/>
-            </svg></div>
+            <div class="product-icon petfood-icon"><img src="work/ofa-4ss.png" alt="ซองซีล 4 ด้าน 4SS" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:2;padding:18px 12px" draggable="false"></div>
             <div class="product-info">
                 <h3>ซองซีล 4 ด้าน (4SS)</h3>
                 <p>ฟิล์มหนาพิเศษ ซีลแข็งแรง ยกถุงหนักแล้วไม่ปริ ทนการขนส่งและการวางซ้อน เจาะหูหิ้วได้ เหมาะกับอาหารปลาถุงใหญ่และอาหารสัตว์เศรษฐกิจ</p>
@@ -938,6 +961,15 @@
 
     <div class="petfood-types">
         <span>อาหารสุนัข</span><span>อาหารแมว</span><span>ขนมสัตว์เลี้ยงแบบแห้ง</span><span>อาหารปลาสวยงาม / ปลาคาร์พ</span><span>อาหารกุ้ง</span><span>อาหารนก</span><span>อาหารไก่ · หมู · วัว</span><span>อาหารเม็ดอัด</span>
+    </div>
+
+
+    <div class="shape-band">
+        <div style="text-align:center">
+            <h3 style="font-family:'Montserrat',sans-serif;font-size:1.28rem;color:#0B1F3A;font-weight:700;margin-bottom:6px">รูปแบบถุงที่เราผลิตได้</h3>
+            <p style="color:#7a7568;font-size:.95rem;line-height:1.7;max-width:640px;margin:0 auto">เลือกทรงตามสินค้าและวิธีบรรจุของคุณ — ไม่แน่ใจว่าควรใช้ทรงไหน ส่งรูปถุงเดิมมาทาง LINE เราดูให้</p>
+        </div>
+        <div class="shape-grid"><div class="shape-item"><svg viewBox="0 0 90 112" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M22 26h46v72H22z"/><path d="M22 98l-8 8h62l-8-8"/><path d="M14 106V34l8-8M76 106V34l-8-8"/><path d="M45 26v72" stroke="#C9A227" stroke-dasharray="4 4"/><path d="M22 26h46" stroke="#C9A227" stroke-width="3"/></svg><strong>ถุงก้นแบน (FBT)</strong><span>ตั้งได้เต็มใบ · 1-20 กก.</span></div><div class="shape-item"><svg viewBox="0 0 90 112" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M20 22h50v70H20z"/><path d="M20 92c10 8 40 8 50 0"/><path d="M24 34h42" stroke="#C9A227" stroke-width="3"/><path d="M20 22h50" stroke="#C9A227" stroke-width="3"/></svg><strong>ซองก้นตั้ง + ซิป</strong><span>ตั้งโชว์ชั้น เปิด-ปิดซ้ำ</span></div><div class="shape-item"><svg viewBox="0 0 90 112" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M24 20h42v76H24z"/><path d="M45 20v76" stroke="#C9A227" stroke-dasharray="5 4"/><path d="M24 20h42M24 96h42" stroke="#C9A227" stroke-width="3"/></svg><strong>ซองซีลกลาง · ม้วน</strong><span>เข้าเครื่องออโตแพค</span></div><div class="shape-item"><svg viewBox="0 0 90 112" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M24 18h42v80H24z"/><path d="M24 18h42M24 98h42M66 18v80" stroke="#C9A227" stroke-width="3"/></svg><strong>ซองซีล 3 ด้าน</strong><span>ซองแบน ต้นทุนคุ้ม</span></div><div class="shape-item"><svg viewBox="0 0 90 112" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M22 18h46v80H22z"/><rect x="30" y="26" width="30" height="64" stroke="#0B1F3A"/><path d="M22 18h46M22 98h46M22 18v80M68 18v80" stroke="#C9A227" stroke-width="3"/></svg><strong>ซองซีล 4 ด้าน (4SS)</strong><span>ซีลแข็งแรงรอบใบ</span></div><div class="shape-item"><svg viewBox="0 0 90 112" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M24 30h42v68H24z"/><path d="M36 30V20a9 9 0 0118 0v10" stroke="#C9A227" stroke-width="3"/><path d="M24 98l-6 6h54l-6-6"/></svg><strong>ถุงหูหิ้ว / เจาะหิ้ว</strong><span>ถุงใหญ่ ยกสะดวก</span></div></div>
     </div>
 
     <div class="petfood-why">
