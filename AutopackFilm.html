@@ -158,6 +158,20 @@
         .why-card .ic { font-size: 1.8rem; }
         .why-card h3 { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; color: var(--dark-blue); margin: 10px 0 6px; }
         .why-card p { font-size: 0.9rem; color: #555; line-height: 1.7; }
+        .cmp-wrap { max-width: 900px; margin: 26px auto 6px; padding: 0 20px; }
+        .cmp-title { text-align: center; font-family: 'Prompt', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 4px; }
+        .cmp-sub { text-align: center; font-size: 0.88rem; color: #6B7280; margin-bottom: 14px; }
+        .cmp-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.92rem; line-height: 1.55; border: 1px solid #e3e5ea; border-radius: 12px; overflow: hidden; background: #fff; }
+        .cmp-table th, .cmp-table td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid #eef0f3; }
+        .cmp-table tr:last-child td { border-bottom: none; }
+        .cmp-table thead th { background: #0B1F3A; color: #fff; font-weight: 600; font-size: 0.95rem; }
+        .cmp-table thead th.cmp-here { background: #C9A227; color: #0B1F3A; }
+        .cmp-table td.cmp-k { color: #6B7280; font-size: 0.85rem; width: 22%; background: #F9FAFB; }
+        .cmp-table td.cmp-here { background: #FFFBEB; color: #0B1F3A; font-weight: 600; }
+        .cmp-table td { color: #444; }
+        .cmp-table a { color: #b8962e; font-weight: 700; text-decoration: none; }
+        .cmp-tag { display: block; font-size: 0.72rem; font-weight: 500; opacity: .85; }
+        @media (max-width: 768px) { .cmp-wrap { padding: 0 12px; } .cmp-table { font-size: 0.84rem; } .cmp-table th, .cmp-table td { padding: 8px 8px; } .cmp-table td.cmp-k { font-size: 0.78rem; } }
         .mat-section { padding: 60px 40px; background: var(--gray-light); }
         .mat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
         .mat-card { background: var(--white); border: 1px solid #e8e8e8; border-radius: 14px; padding: 24px; }
@@ -211,7 +225,7 @@
 <section class="hero">
     <div class="hero-content">
         <h1>รับผลิตม้วนฟิล์มออโตแพค</h1>
-        <p>ม้วนฟิล์มลามิเนตเข้าเครื่องบรรจุอัตโนมัติทุกรุ่น กันชื้น กันแสง กันอากาศ พิมพ์ลายแบรนด์คมชัด ผลิตตรงสเปคเครื่องของคุณ</p>
+        <p>ม้วนฟิล์มลามิเนตหลายชั้น (PET/LL · OPP/CPP · PET/AL/PE) เข้าเครื่องบรรจุอัตโนมัติ กันชื้น กันแสง กันอากาศ มีทั้งแบบใสและแบบพิมพ์ลายแบรนด์ ผลิตตรงสเปคเครื่องของคุณ</p>
         <div class="badges">
             <span class="badge">ผลิตไว 15-20 วัน</span>
             <span class="badge">พิมพ์กราเวียร์ 8 สี</span>
@@ -220,6 +234,14 @@
         </div>
     </div>
 </section>
+<div class="cmp-wrap">
+    <div class="cmp-title">ม้วนพลาสติก กับ ม้วนฟิล์มออโตแพค ต่างกันยังไง?</div>
+    <div class="cmp-sub">ดูให้ตรงงานก่อน — 2 แบบนี้คนละสินค้ากัน</div>
+    <table class="cmp-table">
+        <thead><tr><th></th><th class="">ม้วนพลาสติก<span class="cmp-tag">ม้วนเป่าชั้นเดียว</span></th><th class="cmp-here">ม้วนฟิล์มออโตแพค<span class="cmp-tag">ม้วนลามิเนตหลายชั้น</span></th></tr></thead>
+        <tbody><tr><td class="cmp-k">โครงสร้าง</td><td class="">ชั้นเดียว (ฟิล์มเป่า)</td><td class="cmp-here">หลายชั้นประกบกัน (ลามิเนต)</td></tr><tr><td class="cmp-k">เนื้อฟิล์ม</td><td class="">LDPE · LLDPE · HDPE · PP</td><td class="cmp-here">PET/LL · OPP/CPP · PET/AL/PE</td></tr><tr><td class="cmp-k">รูปแบบม้วน</td><td class="">แบบแผ่น หรือ แบบท่อ</td><td class="cmp-here">แบบแผ่น ตามหน้ากว้างเครื่อง</td></tr><tr><td class="cmp-k">ใช้ทำอะไร</td><td class="">ตัดซีลเป็นถุง · ห่อสินค้า</td><td class="cmp-here">เข้าเครื่องบรรจุซองอัตโนมัติ</td></tr><tr><td class="cmp-k">งานพิมพ์</td><td class="">แบบใส หรือ พิมพ์ลาย</td><td class="cmp-here">แบบใส หรือ พิมพ์ลาย</td></tr><tr><td class="cmp-k">สั่งซื้อ</td><td class="">ขายเป็น กก.</td><td class="cmp-here">ตามสเปคเครื่องและลาย</td></tr><tr><td class="cmp-k">ไปหน้า</td><td class=""><a href="Roll.html">ดูม้วนพลาสติก →</a></td><td class="cmp-here">คุณอยู่หน้านี้</td></tr></tbody>
+    </table>
+</div>
 <section class="section">
     <div style="display:flex;flex-wrap:wrap;gap:40px;align-items:center;justify-content:center">
         <div style="flex:1 1 300px;max-width:400px;text-align:center">
@@ -230,7 +252,8 @@
             <div class="section-divider" style="margin:12px 0 20px 0"></div>
             <p style="color:var(--gray);line-height:1.9;margin-bottom:20px">ฟิล์มลามิเนตหลายชั้น รีดม้วนให้ตรงสเปคเครื่องบรรจุอัตโนมัติของคุณ กันชื้น กันแสง กันอากาศ ตามระดับที่สินค้าต้องการ</p>
             <ul style="list-style:none;padding:0;color:#444;font-size:1rem;line-height:2.1">
-                <li><span style="color:#C9A227;font-weight:800;margin-right:6px">✓</span>โครงสร้าง PET / อลูมิเนียมฟอยล์ / PE และอื่นๆ</li>
+                <li><span style="color:#C9A227;font-weight:800;margin-right:6px">✓</span>โครงสร้าง PET/LL · OPP/CPP · PET/AL/PE และอื่นๆ</li>
+                <li><span style="color:#C9A227;font-weight:800;margin-right:6px">✓</span>มีทั้งแบบใส และแบบพิมพ์ลายแบรนด์</li>
                 <li><span style="color:#C9A227;font-weight:800;margin-right:6px">✓</span>พิมพ์กราเวียร์คมชัดสูงสุด 8 สี</li>
                 <li><span style="color:#C9A227;font-weight:800;margin-right:6px">✓</span>ผลิตไว 15–20 วัน · เสนอราคาใน 24 ชม.</li>
                 <li><span style="color:#C9A227;font-weight:800;margin-right:6px">✓</span>ส่งตัวอย่างทดสอบกับเครื่องก่อนสั่งจริง</li>
@@ -259,7 +282,7 @@
             ใช้เครื่องออโตแพครุ่นไหนอยู่ก็สั่งได้ เพียงแจ้งชนิดสินค้า โครงสร้างฟิล์มที่ใช้เดิม (ถ้ามี) หน้ากว้างและขนาดแกนม้วน ทีมงานจะแนะนำสเปคที่คุ้มค่าที่สุดให้ ขอใบเสนอราคาฟรี ไม่มีค่าใช้จ่าย
         </p>
         <p style="margin-top:20px">
-            มองหาม้วนพลาสติกชั้นเดียวแบบทั่วไป? ดู <a href="Roll.html" style="color:#b8962e;font-weight:600">ม้วนพลาสติก LDPE HDPE PP</a> สำหรับงานห่อและเครื่องซีลทั่วไป
+            ถ้าต้องการฟิล์มเป่าชั้นเดียว (LDPE LLDPE HDPE PP) ขายเป็นกิโลกรัม สำหรับตัดซีลเป็นถุงหรือห่อสินค้า ดู <a href="Roll.html" style="color:#b8962e;font-weight:600">ม้วนพลาสติก</a> ซึ่งเป็นคนละสินค้ากับหน้านี้
         </p>
     </div>
 </section>
@@ -301,8 +324,8 @@
     </div>
     <div class="mat-grid">
         <div class="mat-card">
-            <div class="mat-name">PET / PE</div>
-            <div class="mat-full">Polyester + Polyethylene</div>
+            <div class="mat-name">PET / LL</div>
+            <div class="mat-full">Polyester + LLDPE</div>
             <div class="mat-props">พิมพ์สวย ผิวเรียบ ซีลง่าย ต้นทุนคุ้มค่า เป็นโครงสร้างพื้นฐานงานทั่วไป</div>
             <div class="mat-use"><strong>เหมาะกับ:</strong> ขนม อาหารแห้ง สินค้าทั่วไปที่ไม่ต้องกันชื้นสูงมาก</div>
         </div>
