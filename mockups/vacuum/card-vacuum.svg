@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="ถุงสุญญากาศไนลอน Ny/LL ซีล 3 ด้าน">
+  <defs>
+    <linearGradient id="film" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".30"/>
+      <stop offset=".5" stop-color="#ffffff" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".24"/>
+    </linearGradient>
+    <linearGradient id="meat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9826b"/><stop offset="1" stop-color="#a94f3d"/>
+    </linearGradient>
+  </defs>
+  <!-- ถุงด้านหลัง -->
+  <g transform="translate(150 150) rotate(-8) translate(-150 -150)" opacity=".55">
+    <rect x="58" y="52" width="150" height="196" rx="6" fill="url(#film)" stroke="#fff" stroke-opacity=".5"/>
+    <g fill="url(#meat)"><rect x="80" y="100" width="106" height="30" rx="15"/><rect x="80" y="136" width="106" height="30" rx="15"/><rect x="80" y="172" width="106" height="30" rx="15"/></g>
+  </g>
+  <!-- ถุงด้านหน้า -->
+  <g transform="translate(150 150) rotate(6) translate(-150 -150)">
+    <rect x="96" y="44" width="150" height="208" rx="6" fill="#0B1F3A" fill-opacity=".25"/>
+    <g fill="url(#meat)">
+      <rect x="118" y="96" width="106" height="32" rx="16"/>
+      <rect x="118" y="134" width="106" height="32" rx="16"/>
+      <rect x="118" y="172" width="106" height="32" rx="16"/>
+    </g>
+    <g stroke="#ffffff" stroke-opacity=".35" fill="none"><path d="M128 104h86M128 142h86M128 180h86"/></g>
+    <rect x="96" y="44" width="150" height="208" rx="6" fill="url(#film)" stroke="#ffffff" stroke-opacity=".75" stroke-width="1.5"/>
+    <!-- แนวซีล 3 ด้าน -->
+    <g fill="#ffffff" fill-opacity=".22"><rect x="96" y="226" width="150" height="26"/><rect x="96" y="44" width="12" height="208"/><rect x="234" y="44" width="12" height="208"/></g>
+    <g stroke="#ffffff" stroke-opacity=".45"><path d="M96 232h150M96 238h150M96 244h150"/></g>
+    <!-- ฉลาก -->
+    <rect x="132" y="58" width="78" height="26" rx="4" fill="#C9A227"/>
+    <text x="171" y="76" font-family="Montserrat,Arial,sans-serif" font-size="13" font-weight="700" fill="#0B1F3A" text-anchor="middle">YOUR BRAND</text>
+    <path d="M110 60 l0 150" stroke="#fff" stroke-opacity=".55" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="150" y="288" font-family="Montserrat,Arial,sans-serif" font-size="12" font-weight="600" fill="#C9A227" text-anchor="middle" letter-spacing="1.5">Ny/LL · VACUUM</text>
+</svg>
